@@ -1,0 +1,64 @@
+<div class="text-layout">
+  <h1>Pipes Básicos</h1>
+  <p>Pipes inluídos en Angular - Usualmente en el Common Module.</p>
+</div>
+
+<!-- Pipes Basicos -->
+
+<div class="grid">
+  <div class="col-4">
+    <p-card header="uppercase" [subheader]="nombreLower | uppercase">
+      Original: {{ nombreLower }}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="lowercase" [subheader]="nombreUpper | lowercase">
+      Original: {{ nombreUpper }}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="titlecase" [subheader]="nombreCompleto | titlecase">
+      Original: {{ nombreCompleto }}</p-card
+    >
+  </div>
+</div>
+
+<div class="text-layout">
+  <h1>Date | Fecha | Pipe</h1>
+  <p>Pipe para ajustar las fechas.</p>
+</div>
+
+<!-- Date Pipes -->
+
+<div class="grid">
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>Fecha</li>
+        <li>Fecha | date</li>
+        <li>Fecha | date: short</li>
+        <li>Fecha | date: personalizado (dd MMMM of yyyy - w)</li>
+      </ul>
+      <hr />
+      <ul>
+        <li>Fecha | date: long : 'GMT+0'</li>
+        <li>Fecha | date: long : 'Japon'</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>{{ fecha }}</li>
+        <li>{{ fecha | date }}</li>
+        <li>{{ fecha | date: "short" }}</li>
+        <li>{{ fecha | date: "dd MMMM of yyyy - w" }}</li>
+      </ul>
+      <hr />
+      <ul>
+        <li>{{ fecha | date: "long":"GMT+0" }}</li>
+        <li>{{ fecha | date: "long":"":"ja" }}</li>
+      </ul>
+    </p-card>
+  </div>
+</div>
